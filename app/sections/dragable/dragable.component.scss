@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+
+//-------------------------------------VARIABLES-------------------------------------
+//Colours
+    $red: #ff002d;
+    $yellow: #f49f1a;
+    $gradient: linear-gradient(-90deg, #ff002d, #f49f1a);
+    $dark: black;
+//Fonts
+    $title: 60px;
+    $subtitle: 24px;
+    $body: 16px;
+    @mixin thin {
+        font-family: Raleway;
+        font-weight: 400;
+    }
+    @mixin semibold {
+        font-family: Raleway;
+        font-weight: 600;
+    }
+    @mixin bold {
+        font-family: Raleway;
+        font-weight: 700;
+    }
+//Flexbox
+    @mixin flex {
+        display: -webkit-flex;
+        display: flex;
+        list-style: none;
+    }
+//------------------------------------DRAGGABLE PAGE-------------------------------------
+body {
+    background-color: #eef;
+}
+  div {
+    padding: 0px;
+}
+#resized {
+    width: 300px;
+    max-width: 1000px;
+    overflow: hidden;
+    img{
+        width: 1000px;
+    }
+}
+#resized-container {
+    width: 1000px;
+    margin: 0 auto;
+    background: url(/wp-content/themes/storefront2/assets/images/landing/draggable_car_empty.svg) no-repeat center;
+    margin-bottom: 100px;
+}
+h2{
+    @include thin;
+    font-size: $subtitle;
+    line-height: 40px;
+    color: $dark;
+    padding: 40px 0px;
+    text-align: center;
+}

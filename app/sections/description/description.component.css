@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700");
+.product-details {
+  width: 1280px;
+  margin: auto;
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .product-details-content {
+    width: 40%;
+    display: -webkit-flex;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    align-items: center; }
+    .product-details-content img {
+      width: 500px; }
+    .product-details-content-title {
+      width: 100%;
+      height: 50px;
+      font-family: Raleway;
+      font-weight: 400;
+      font-size: 24px;
+      text-align: center; }
+    .product-details-content-checkmark {
+      width: 5%;
+      height: 40px; }
+      .product-details-content-checkmark img {
+        width: 26px; }
+    .product-details-content-text {
+      width: 95%;
+      line-height: 30px;
+      padding-left: 16px;
+      padding-bottom: 20px; }
+  .product-details-content:nth-of-type(2) {
+    align-items: flex-start; }
+  .product-details-content:nth-of-type(3) {
+    align-items: flex-start; }
+  .product-details-content:nth-of-type(6) {
+    align-items: flex-start; }
+
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (max-width: 1280px) {
+  .product-details {
+    width: 90%; } }
+
+@media (max-width: 1024px) {
+  .product-details-content:nth-of-type(1) {
+    order: 1; }
+  .product-details-content:nth-of-type(2) {
+    order: 2; }
+  .product-details-content:nth-of-type(3) {
+    order: 4; }
+  .product-details-content:nth-of-type(4) {
+    order: 3; }
+  .product-details-content:nth-of-type(5) {
+    order: 5; }
+  .product-details-content:nth-of-type(6) {
+    order: 6; }
+  .product-details-content {
+    width: 100%;
+    margin-bottom: 50px; }
+    .product-details-content img {
+      width: 400px; }
+    .product-details-content-checkmark img {
+      width: 26px; } }

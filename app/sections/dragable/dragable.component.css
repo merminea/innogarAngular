@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700");
+body {
+  background-color: #eef; }
+
+div {
+  padding: 0px; }
+
+#resized {
+  width: 300px;
+  max-width: 1000px;
+  overflow: hidden; }
+  #resized img {
+    width: 1000px; }
+
+#resized-container {
+  width: 1000px;
+  margin: 0 auto;
+  background: url(/wp-content/themes/storefront2/assets/images/landing/draggable_car_empty.svg) no-repeat center;
+  margin-bottom: 100px; }
+
+h2 {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: black;
+  padding: 40px 0px;
+  text-align: center; }

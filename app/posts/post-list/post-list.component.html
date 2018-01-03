@@ -1,0 +1,17 @@
+<div class="about-img-container">
+  <div class="about-img-container-content">
+    <h1>Meet Our Team</h1>
+    <h2>Meet the team behind InnoGar</h2>
+  </div>
+</div>
+
+<div class="about-us">
+  <div class="about-us-person" *ngFor="let post of posts">
+    <div class="about-us-person-picture"><img src="{{ post.featured_image_src }}" alt=""></div>
+    <div class="about-us-person-description">
+      <div class="about-us-person-description-name">{{ post.title.rendered }}</div>
+      <div class="about-us-person-description-job">{{ post.excerpt.rendered }}</div>
+      <div class="about-us-person-description-about">{{ post.content.rendered }}</div>
+    </div>
+  </div>
+</div>

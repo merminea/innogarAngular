@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+
+//-------------------------------------VARIABLES-------------------------------------
+//Colours
+    $red: #ff002d;
+    $yellow: #f49f1a;
+    $gradient: linear-gradient(-90deg, #ff002d, #f49f1a);
+    $dark: black;
+//Fonts
+    $title: 60px;
+    $subtitle: 24px;
+    $body: 16px;
+    @mixin thin {
+        font-family: Raleway;
+        font-weight: 400;
+        color: $dark;
+    }
+    @mixin semibold {
+        font-family: Raleway;
+        font-weight: 600;
+        color: $dark;
+    }
+    @mixin bold {
+        font-family: Raleway;
+        font-weight: 700;
+        color: $dark;
+    }
+//Flexbox
+    @mixin flex {
+        display: -webkit-flex;
+        display: flex;
+        list-style: none;
+    }
+//-------------------------------------FOOTER SECTION-------------------------------------
+.footer-container{
+    background: url(/wp-content/themes/storefront2/assets/images/landing/footer_bg.svg) no-repeat bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    &-content{
+        width: 1280px;
+        margin: auto;
+        text-align: center;
+        padding-top: 300px;
+        color: white;
+        font-size: $body;
+        @include flex;
+        justify-content: space-between;
+        &-navigation{
+            width: 35%;
+            height: 50px;
+            @include flex;
+            justify-content: space-between;
+            &-links{
+                width: 33%;
+                height: 50px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (max-width: 1280px) {
+    .footer-container{
+        &-content{
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 1160px) {
+    .footer-container{
+        &-content{
+            flex-wrap: wrap;
+            &-navigation{
+                width: 100%;
+                justify-content: center;
+                &-links{
+                    width: 15%;
+                }
+            }
+        }
+    }
+}

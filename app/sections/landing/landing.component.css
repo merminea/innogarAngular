@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700");
+.landing-container {
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  width: 1280px;
+  justify-content: space-between;
+  padding: 0;
+  margin: auto;
+  margin-top: 100px; }
+  .landing-container-welcome {
+    width: 48%;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: left;
+    flex-direction: column;
+    align-self: center; }
+    .landing-container-welcome-img {
+      width: 100%;
+      text-align: center; }
+  .landing-container-buttons {
+    display: -webkit-flex;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 56%;
+    height: 48px;
+    margin-top: 28px; }
+    .landing-container-buttons .learnmore {
+      text-align: center;
+      border-radius: 8px;
+      background: linear-gradient(-90deg, #ff002d, #f49f1a);
+      padding: 2px 40px; }
+    .landing-container-buttons .buy {
+      text-align: center;
+      width: 136px;
+      height: 48px;
+      border-left: 2px solid #f49f1a;
+      border-right: 2px solid #ff002d;
+      border-radius: 8px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-position: 0 0, 0 100%;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100% 2px;
+      -moz-background-size: 100% 2px;
+      background-size: 100% 2px;
+      background-image: -webkit-linear-gradient(left, #f49f1a 0%, #ff002d 100%), -webkit-linear-gradient(left, #f49f1a 0%, #ff002d 100%);
+      background-image: -moz-linear-gradient(left, #f49f1a 0%, #ff002d 100%), -moz-linear-gradient(left, #f49f1a 0%, #ff002d 100%);
+      background-image: -o-linear-gradient(left, #f49f1a 0%, #ff002d 100%), -o-linear-gradient(left, #f49f1a 0%, #ff002d 100%);
+      background-image: linear-gradient(to right, #f49f1a 0%, #ff002d 100%), linear-gradient(to right, #f49f1a 0%, #ff002d 100%); }
+    .landing-container-buttons h3 {
+      font-family: Raleway;
+      font-weight: 400;
+      color: black;
+      font-size: 16px;
+      color: white;
+      line-height: 48px; }
+    .landing-container-buttons h4 {
+      font-family: Raleway;
+      font-weight: 400;
+      color: black;
+      font-size: 16px;
+      line-height: 48px; }
+  .landing-container h1 {
+    font-family: Raleway;
+    font-weight: 700;
+    color: black;
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 20px; }
+  .landing-container h2 {
+    font-family: Raleway;
+    font-weight: 400;
+    color: black;
+    font-size: 24px;
+    line-height: 40px; }
+
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (max-width: 1366px) {
+  .landing-container {
+    width: 90%;
+    margin-top: 50px; }
+    .landing-container-buttons {
+      width: 70%; } }
+
+@media (max-width: 1025px) {
+  .landing-container-buttons {
+    width: 100%; } }
+
+@media (max-width: 769px) {
+  .landing-container {
+    flex-direction: column; }
+    .landing-container-welcome {
+      width: 100%;
+      text-align: center; }
+    .landing-container-buttons {
+      justify-content: center;
+      width: 100%; }
+      .landing-container-buttons .learnmore {
+        margin-right: 10px; }
+      .landing-container-buttons .buy {
+        margin-left: 10px; } }

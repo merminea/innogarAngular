@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700");
+/* --------------------------
+Base Styles
+--------------------------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  color: black;
+  font-size: 16px;
+  margin: 0;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400; }
+
+.header-container {
+  width: 90%;
+  margin: auto; }
+
+/* --------------------------
+Main Styles
+--------------------------- */
+.header-main-header {
+  padding-top: 2rem; }
+
+.header-site-logo {
+  align-self: center;
+  margin-bottom: 1rem;
+  width: 150px; }
+  .header-site-logo img {
+    height: auto;
+    max-width: 100%;
+    display: block; }
+
+.header-main-header,
+.header-nav {
+  display: flex;
+  flex-direction: column; }
+
+.header-nav a {
+  display: block;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.4em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+
+.header-nav a:hover {
+  color: #0b0b0b; }
+
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (min-width: 769px) {
+  .header-main-header {
+    height: 200px; }
+  .header-site-logo {
+    width: 140px; }
+  .header-nav {
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between; }
+  .header-nav a {
+    border-bottom-color: transparent; }
+  .header-nav li:last-child {
+    border-radius: 8px;
+    background: linear-gradient(-90deg, #ff002d, #f49f1a);
+    padding: 2px 16px;
+    color: white; }
+    .header-nav li:last-child .header-button {
+      font-family: Raleway;
+      font-weight: 400;
+      color: black;
+      font-size: 16px;
+      color: white;
+      margin: 0; } }
+
+@media (min-width: 1025px) {
+  .header-main-header {
+    flex-direction: row;
+    height: 150px; }
+  .header-site-logo {
+    margin-right: auto; }
+  .header-nav {
+    margin: 0;
+    align-self: center; }
+  .header-nav li {
+    margin: 0 0.65rem; }
+  .header-nav li:last-child {
+    border-radius: 8px;
+    background: linear-gradient(-90deg, #ff002d, #f49f1a);
+    padding: 2px 16px;
+    color: white; } }
+
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (min-width: 767px) {
+  .header-main-content {
+    margin-top: 4em; }
+  p {
+    column-count: 2;
+    column-gap: 2.5em; } }
+
+@media (min-width: 1366px) {
+  .header-container {
+    width: 1280px; } }
+
+@media (max-width: 1365px) {
+  .header-container {
+    width: 90%; } }

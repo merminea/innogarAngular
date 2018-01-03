@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+
+//-------------------------------------VARIABLES-------------------------------------
+//Colours
+    $red: #ff002d;
+    $yellow: #f49f1a;
+    $gradient: linear-gradient(-90deg, #ff002d, #f49f1a);
+    $dark: black;
+//Fonts
+    $title: 60px;
+    $subtitle: 24px;
+    $body: 16px;
+    @mixin thin {
+        font-family: Raleway;
+        font-weight: 400;
+        color: $dark;
+    }
+    @mixin semibold {
+        font-family: Raleway;
+        font-weight: 600;
+        color: $dark;
+    }
+    @mixin bold {
+        font-family: Raleway;
+        font-weight: 700;
+        color: $dark;
+    }
+//Flexbox
+    @mixin flex {
+        display: -webkit-flex;
+        display: flex;
+        list-style: none;
+    }
+/* --------------------------
+Base Styles
+--------------------------- */
+.future-img-container{
+    background: url(/wp-content/themes/storefront2/assets/images/landing/frontpage_second_divider.svg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 900px;
+    &-content{
+        width: 1280px;
+        margin: auto;
+        text-align: center;
+        h1{
+            @include bold;
+            font-size: $title;
+            line-height: 70px;
+            color: white;
+            padding-top: 380px;
+        }
+        h2{
+            @include thin;
+            font-size: $subtitle;
+            line-height: 40px;
+            color: white;
+            padding-top: 50px;
+        }
+    }
+}
+.future{
+    width: 1280px;
+    margin: auto;
+    @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: justify;
+    &-content-left{
+        width: 40%;
+        h2{
+            @include thin;
+            font-size: $subtitle;
+            line-height: 40px;
+            text-align: right;
+        }
+        p{
+            @include thin;
+            font-size: $body;
+            line-height: 24px;
+            margin-bottom: 104px;
+            text-align-last: right;
+        }
+    }
+    &-content-right{
+        width: 40%;
+        padding-top: 74px;
+        h2{
+            @include thin;
+            font-size: $subtitle;
+            line-height: 40px;
+            text-align: left;
+        }
+        p{
+            @include thin;
+            font-size: $body;
+            line-height: 24px;
+            margin-bottom: 90px;
+        }
+    }
+    &-divider{
+        width: 5%;
+        text-align: center;
+    }
+}
+
+.future-test{
+    width: 90%;
+    margin: auto;
+    &-divider{
+        border-left: 2px solid $red;
+        padding-left: 40px;
+        padding-bottom: 40px;
+        &-content{
+            width: 100%;
+            @include flex;
+            flex-wrap: wrap;
+            &-text{
+                position: relative;
+                h2{
+                    @include thin;
+                    font-size: $subtitle;
+                    line-height: 40px;
+                }
+            }
+            &-text:before{
+                content: "";
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                background: white;
+                border: 2px solid $red;
+                position: absolute;
+                left: -3.4rem;
+            }
+        }
+    }
+}
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (min-width: 1366px){
+    .future-test{
+        display: none;
+    }
+}
+@media (max-width: 1366px) {
+    .future-img-container{
+        height: 680px;
+        &-content{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            h1{
+                padding-top: 240px;
+            }
+        }
+    }
+    .future{
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .future-img-container{
+        height: 540px;
+        &-content{
+            h1{
+                padding-top: 220px;
+            }
+            h2{
+                padding-top: 0px;
+            }
+        }
+    }
+}
+@media (max-width: 485x) {
+    .future-img-container{
+        &-content{
+            h2{
+                padding-top: 0px;
+            }
+        }
+    }
+}

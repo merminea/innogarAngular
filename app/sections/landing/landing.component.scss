@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+
+//-------------------------------------VARIABLES-------------------------------------
+//Colours
+    $red: #ff002d;
+    $yellow: #f49f1a;
+    $gradient: linear-gradient(-90deg, #ff002d, #f49f1a);
+    $dark: black;
+//Fonts
+    $title: 60px;
+    $subtitle: 24px;
+    $body: 16px;
+    @mixin thin {
+        font-family: Raleway;
+        font-weight: 400;
+        color: $dark;
+    }
+    @mixin semibold {
+        font-family: Raleway;
+        font-weight: 600;
+        color: $dark;
+    }
+    @mixin bold {
+        font-family: Raleway;
+        font-weight: 700;
+        color: $dark;
+    }
+//Flexbox
+    @mixin flex {
+        display: -webkit-flex;
+        display: flex;
+        list-style: none;
+    }
+//-------------------------------------LANDING PAGE WELCOME SECTION-------------------------------------
+.landing-container {
+    @include flex;
+    width: 1280px;
+    justify-content: space-between;
+    padding: 0;
+    margin: auto;
+    margin-top: 100px;
+    &-welcome{
+        width: 48%;
+        margin-top: 10px;
+        line-height: 150px;
+        color: white;
+        font-weight: bold;
+        font-size: 3em;
+        text-align: left;
+        flex-direction: column;
+        align-self: center;
+        &-img{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &-buttons{
+        @include flex;
+        justify-content: space-between;
+        width: 56%;
+        height: 48px;
+        margin-top: 28px;
+        .learnmore{
+            text-align: center;
+            border-radius: 8px;
+            background: $gradient;
+            padding: 2px 40px;
+        }
+        .buy{
+            text-align: center;
+            width: 136px;
+            height: 48px;
+            border-left: 2px solid $yellow;
+            border-right: 2px solid $red;
+            border-radius: 8px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-position: 0 0, 0 100%;
+            background-repeat: no-repeat;
+            -webkit-background-size: 100% 2px;
+            -moz-background-size: 100% 2px;
+            background-size: 100% 2px;
+            background-image: -webkit-linear-gradient(left, $yellow 0%, $red 100%), -webkit-linear-gradient(left, $yellow 0%, $red 100%);
+            background-image: -moz-linear-gradient(left, $yellow 0%, $red 100%), -moz-linear-gradient(left, $yellow 0%, $red 100%);
+            background-image: -o-linear-gradient(left, $yellow 0%, $red 100%), -o-linear-gradient(left, $yellow 0%, $red 100%);
+            background-image: linear-gradient(to right, $yellow 0%, $red 100%), linear-gradient(to right, $yellow 0%, $red 100%);
+        }
+        h3{
+            @include thin;
+            font-size: $body;
+            color: white;
+            line-height: 48px;
+        }
+        h4{
+            @include thin;
+            font-size: $body;
+            line-height: 48px;
+        }
+    }
+    h1{
+        @include bold;
+        font-size: $title;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+    h2{
+        @include thin;
+        font-size: $subtitle;
+        line-height: 40px;
+    }
+}
+
+/* --------------------------
+Media Queries
+--------------------------- */
+@media (max-width: 1366px) {
+    .landing-container {
+        width: 90%;
+        margin-top: 50px;
+        &-buttons{
+            width: 70%;
+        }
+    }
+}
+@media (max-width: 1025px) {
+    .landing-container {
+        &-buttons{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .landing-container {
+        flex-direction: column;
+        &-welcome{
+            width: 100%;
+            text-align: center;
+        }
+        &-buttons{
+            justify-content: center;
+            width: 100%;
+            .learnmore{
+                margin-right: 10px;
+            }
+            .buy{
+                margin-left: 10px;
+            }
+        }
+    }
+}

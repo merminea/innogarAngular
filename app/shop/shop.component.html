@@ -1,0 +1,60 @@
+<div class="shop-container">
+  <h1>Don’t miss out on our special offer!</h1>
+  <h2>Grab your own InnoGar today and give your car some love.</h2>
+  <div class="shop-container-featuredimg">
+      <div class="shop-container-featuredimg-big"></div>
+      <div class="shop-container-featuredimg-small"></div>
+      <div class="shop-container-featuredimg-small"></div>
+      <div class="shop-container-featuredimg-small"></div>
+  </div>
+  <div class="shop-container-featuredtext">
+      <div class="shop-container-featuredtext-name">
+        This is some name
+      </div>
+      <div class="shop-container-featuredtext-regular">
+        1000$
+      </div>
+      <div class="shop-container-featuredtext-checkmark">
+          <img src="/wp-content/themes/storefront2/assets/images/landing/checkmark.svg" alt="checkmark">
+      </div>
+      <div class="shop-container-featuredtext-property">
+        Self-propelled remote-controlled
+      </div>
+      <div class="shop-container-featuredtext-checkmark">
+          <img src="/wp-content/themes/storefront2/assets/images/landing/checkmark.svg" alt="checkmark">
+      </div>
+      <div class="shop-container-featuredtext-property">
+        Heatable and coolable
+      </div>
+      <div class="shop-container-featuredtext-checkmark">
+          <img src="/wp-content/themes/storefront2/assets/images/landing/checkmark.svg" alt="checkmark">
+      </div>
+      <div class="shop-container-featuredtext-property">
+        Equipped with a parking assistance radar
+      </div>
+      <div class="shop-container-featuredtext-regular">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
+      </div>
+      <div class="shop-container-featuredtext-buttons">
+        <div class="buy"><h4>Size</h4></div>
+        <div class="learnmore"><h3>Buy now</h3></div>
+      </div>
+  </div>
+
+  <h2>Grab your own InnoGar today and give your car some love.</h2>
+  <div class="shop-container-items" *ngFor="let garage of garages">
+      <div class="shop-container-items-image"></div>
+      <div class="shop-container-items-name">{{garage.name | uppercase}}</div>
+      <div class="shop-container-items-button"><h3>View</h3></div>
+  </div>
+
+</div>
+
+<!-- <div *ngFor="let garage of garages">
+    {{garage.name | uppercase}}
+    {{garage.price}}
+    {{garage.property_one}}
+    {{garage.property_two}}
+    {{garage.property_three}}
+    {{garage.description}}
+</div> -->
